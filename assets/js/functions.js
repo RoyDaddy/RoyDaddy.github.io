@@ -32,7 +32,7 @@ $( document ).ready(function() {
 
     }
 
-  });
+  }, {passive: false});
 
   $('.side-nav li, .outer-nav li').click(function(){
 
@@ -49,7 +49,7 @@ $( document ).ready(function() {
 
     }
 
-  });
+  }, {passive: false});
 
   $('.cta').click(function(){
 
@@ -61,7 +61,7 @@ $( document ).ready(function() {
     updateNavs(lastItem);
     updateContent(curPos, nextPos, lastItem);
 
-  });
+  }, {passive: false});
 
   // swipe support for touch devices
   var targetElement = document.getElementById('viewport'),
@@ -71,7 +71,7 @@ $( document ).ready(function() {
 
     updateHelper(e);
 
-  });
+  }, {passive: false});
 
   $(document).keyup(function(e){
 
@@ -80,7 +80,7 @@ $( document ).ready(function() {
       updateHelper(e);
     }
 
-  });
+  }, {passive: false});
 
   // determine scroll, swipe, and arrow key direction
   function updateHelper(param) {
